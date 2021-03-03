@@ -17,11 +17,29 @@ disableKinds = ["taxonomy", "term"]
 [services.googleAnalytics]
 id = "UA-149338238-3"
 
+defaultContentLanguage = "en"
+
+[languages]
+  [languages.en]
+    title = "English"
+    weight = 1
+    contentDir = "content/en"
+    languageName ="English"
+  [languages.zh]
+    title = "中文"
+    weight = 2
+    contentDir = "content/zh"
+    languageName ="中文"
+
 # Mounts
 [module]
   [[module.mounts]]
     source = "content/en"
     target = "content"
+  [[module.mounts]]
+    source = "content/zh"
+    target = "content"
+    lang="zh"
   [[module.mounts]]
     source = "static"
     target = "static"
